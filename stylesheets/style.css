@@ -1,0 +1,127 @@
+@font-face{
+   font-family:"Eagle Lake";
+   font-style: normal;
+   font-weight:normal;
+   src:url("fonts/EagleLake-Regular.ttf") format("truetype");
+}
+
+html, body{
+   height:100%;
+}
+body{
+   background:#503B71;
+   display:flex;
+   flex-direction: column;
+   font-family:Arial,Helvetica,sans-serif;
+   font-size:16px;
+}
+a[href]{
+   text-decoration:none;
+}
+.main-header{
+   flex: 01 auto;
+}
+.main-content{
+   flex: 11 auto;
+   flex-direction:column;
+   display:flex;
+}
+.logo-text{
+   background:#88009D;
+   color:#88F09D;
+   text-align:center;
+   text-transform:uppercase;
+   font-family:"Eagle Lake", cursive;
+   font-size:42px;
+}
+.thumbnail-list{
+   flex: 0 1 auto;
+   order: 2;
+   display: flex;
+   justify-content: space-between;
+   list-style:none;
+   padding:20px 0;
+   white-space:nowrap;
+   overflow-x: auto;
+}
+.thumbnail-item{
+   display:inline-block;
+   max-width:120px;
+   min-width:120px;
+   border:2px solid rgba(80, 58, 112, .8);
+   transition: transform 133ms ease-in-out;
+}
+.thumbnail-item:hover{
+   transform:scale(1.2);
+}
+.thumbnail-image{
+   display:block;
+   max-width:100%;
+   min-height:100px;
+}
+.thumbnail-title{
+   display:block;
+   font-family: "Eagle Lake", cursive;
+   margin:0;
+   padding:4px 10px;
+   background:rgb(45,65,128);
+   color:rgb(47,202,107);
+   font-size:1.1rem;
+   text-align: center;
+}
+.detail-image-container{
+   flex: 1 1 auto;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+}
+.detail-image-frame{
+   position:relative;
+   text-align:center;
+   transition: transform 550ms cubic-bezier(.06, .62, .92, .83);
+}
+.is-tiny{
+   transform: scale(0.001);
+   transition: transform 0ms;
+}
+.detail-image{
+   width:90%;
+}
+.detail-image-title{
+   position:absolute;
+   bottom:-16px;
+   left:4px;
+   font-family:"EagleLake";
+   color:white;
+   text-shadow:rgba(0, 0, 0, .9) 3px 4px 7px;
+   font-size:40px;
+}
+.hidden-detail .detail-image-container{
+   display:none;
+}
+.hidden-detail .thumbnail-list{
+   flex-direction:column;
+   align-items: center;
+}
+.hidden-detail .thumbnail-item{
+   max-width: 80%
+}
+@media all and (min-width:768px){
+   .main-content{
+      flex-direction:row;
+      overflow: hidden;
+   }
+   .thumbnail-list{
+      flex-direction: column;
+      order:0;
+      margin-left:20px;
+      padding: 0 55px
+   }
+   .thumbnail-item{
+      max-width:260px;
+   }
+   .thumbnail-item + .thumbnail-item{
+      margin-top:20px;
+   }
+
+}
