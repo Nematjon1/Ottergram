@@ -27,12 +27,14 @@ a[href]{
    display:flex;
 }
 .logo-text{
-   background:#88009D;
-   color:#88F09D;
+   background: hsl(120, 60%, 90%);
+   color: hsl(120, 30%, 40%);
    text-align:center;
    text-transform:uppercase;
    font-family:"Eagle Lake", cursive;
-   font-size:42px;
+   font-size: 3rem;
+   padding: 0.3em 0;
+   border-radius: 3px;
 }
 .thumbnail-list{
    flex: 0 1 auto;
