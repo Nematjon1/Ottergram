@@ -5,8 +5,19 @@
    src:url("fonts/EagleLake-Regular.ttf") format("truetype");
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  font-size: 1em;
+}
 html, body{
    height:100%;
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
 }
 body{
    background:#503B71;
@@ -79,7 +90,7 @@ a[href]{
 }
 .detail-image-frame{
    position:relative;
-   text-align:center;
+   text-align::center;
    transition: transform 550ms cubic-bezier(.06, .62, .92, .83);
 }
 .is-tiny{
