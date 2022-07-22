@@ -11,6 +11,9 @@ const ESC_KEY = 27;
 
 
 
+// Some structure should be added
+// Comments needed to explain code
+
 const setDetails = (imageUrl, titleText) => {
    const detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
    detailImage.setAttribute('src', imageUrl);
@@ -59,6 +62,7 @@ const showDetails = () => {
 
 
 const addKeyPressHandler = () => {
+   // This function should be refactored, it is expensive
    document.body.addEventListener('keyup', function(event){
       event.preventDefault();
       if(event.keyCode === ESC_KEY){
